@@ -1,0 +1,1 @@
+# quarto-business-case-template
