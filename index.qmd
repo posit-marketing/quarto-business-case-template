@@ -1,0 +1,134 @@
+---
+title: |
+  | Streamlining DemoCo Data Workflows to
+  | Impact Sales Pipeline in 2024
+logo: State-Farm-Logo.png
+format: html
+editor: source
+title-block-banner-color: "red"
+title-block-banner: true
+css: styles.css
+params:
+  companyName: "State Farm"
+  cost: 400000
+  peopleNum: 2
+  roiDate: "January 01, 2024"
+  hoursPerWeek: 4
+  peopleCost: 24000
+---
+
+```{r}
+#| include: false
+library(bslib)
+library(bsicons)
+library(shiny)
+library(shinylive)
+```
+
+## Objective
+
+To enhance operational efficiency and streamline workflow processes, enabling our team to dedicate more time to revenue-generating activities & innovative projects.
+
+## Current Problem Statement
+
+Every week, our data team compiles a report for sales leadership that details leads from the week, deals closed, forecasted sales for the remainder of the year, etc. This process, utilizing a combination of Excel, BI Tools, and PowerPoint, requires approximately `r params$hoursPerWeek` hours per week from `r params$peopleNum` individuals across the organization, with an estimated people-cost of ~`r scales::dollar(params$peopleCost)`.
+
+```{r}
+#| echo: false
+vbs <- list(
+  value_box(
+    title = "People required",
+    value = params$peopleNum,
+    showcase = bs_icon("people-fill"),
+    theme = "background-color: #F0E9E0!important;"
+  ),
+  value_box(
+    title = "Hours per week",
+    value = params$hoursPerWeek,
+    showcase = bs_icon("clock-fill"),
+    theme = "background-color: #F0E9E0!important;"
+  ),
+  value_box(
+    title = "Estimated people-cost",
+    value = scales::dollar(params$peopleCost),
+    showcase = bs_icon("piggy-bank-fill"),
+    theme = "background-color: #FFC0CB!important;"
+  )
+)
+
+layout_column_wrap(
+  width = "250px",
+  !!!vbs
+)
+```
+
+The existing tools lack essential features necessary for an automated code-based approach, resulting in increased time spent on manual processes and a higher risk of errors. Moreover, the existing process depends on the availability of specific individuals in the office or working during PTO to deliver the refreshed report on time. This dependency introduces operational limitations and underscores the need for a more efficient and reliable reporting solution.
+
+## Benefits of a code-first approach for `r params$companyName` with Posit Connect
+
+::: {layout-ncol="4"}
+::: {#first-column}
+::: {.rounded-rectangle}
+![](icons/Posit-Icons-LightMode_Data3_Lt-Md.png)
+<br>
+<br>
+**Real-time data integration**
+<br>
+<br>
+Combine data sources for live sales updates weekly, daily, or every minute.
+:::
+:::
+
+::: {#second-column}
+::: {.rounded-rectangle}
+![](icons/Posit-Icons-LightMode_automation-lt-md.png)
+<br>
+<br>
+**Automated report generation**
+<br>
+<br>
+Set up a system to send weekly sales reports via email and Teams when issues arise.
+:::
+:::
+
+::: {#third-column}
+::: {.rounded-rectangle}
+![](icons/Posit-Icons-LightMode_web-apps.png)
+<br>
+<br>
+**Dashboards and applications**
+<br>
+<br>
+Give sales leaders useful insights and let them adjust forecasts.
+:::
+:::
+
+::: {#fourth-column}
+::: {.rounded-rectangle}
+![](icons/Posit-Icons-LightMode_Data2_Lt-Md.png)
+<br>
+<br>
+**Predictive analytics and machine learning**
+<br>
+<br>
+Use data science to predict sales trends and find ways to boost success and reduce losses by saving time.
+:::
+:::
+
+::::
+
+## Cost-Benefit Analysis
+
+The `r scales::dollar(params$cost)` investment of Posit yields immediate gains through time savings, error reduction, and increased productivity. Beyond the current use case included above, the software aligns with our strategic goals of facilitating efficient problem-solving and contributing to long-term business success.
+
+## Implementation Plan
+
+* **Needs assessment**: Confirm alignment between Posit and our specific requirements, ensuring a tailored fit for our business processes.
+* **Trial period**: Conduct a focused 2-week trial, emphasizing the identified use case to showcase the practical application of Posit and its impact on efficiency.
+* **Architecture review**: Schedule a review involving our IT team and Posit to ensure a seamless integration process and address any technical considerations.
+* **Initial roll-out**: Implement the first use case to demonstrate the initial return on investment (ROI) by `r params$roiDate`, showcasing the tangible benefits on our business.
+* **Continuous upskilling**: Foster ongoing skill development by engaging employees through our data science community group. Additionally, organize Posit workshops to enhance proficiency and maximize the software's potential across various business functions.
+
+## Conclusion
+
+Posit is a strategic investment that addresses our current operational challenges, aligns with our growth trajectory, and positions us for future success. Posit works with more than 50% of the Fortune 100, including many of our competitors.

@@ -1,0 +1,45 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web');
+
+.quarto-title-block .quarto-title-banner {
+  background-image: url(State-Farm-Logo.png);
+  background-size: 300px;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding-right: 100px;
+  padding-left: -100px;
+  background-origin: content-box;
+  background-color: white;
+}
+
+$font-family-sans-serif:  "Istok Web" !default;
+$font-family-serif:       "Istok Web" !default;
+
+/*-- scss:rules --*/
+
+h1.title {
+  margin-top: 30px;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: red;
+}
+
+.rounded-rectangle {
+  width: 180px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: #F0E9E0;
+  display: flex;
+  justify-content: initial;
+  align-items: center;
+  text-align: center;
+  color: #151515;
+  font-size: 16px;
+  padding: 20px;
+}
